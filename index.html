@@ -25,6 +25,7 @@
             position: sticky;
             top: 0;
             box-shadow: 0 2px 5px rgba(5, 5, 80, 0.1);
+            font-family: 'Arial', sans-serif;
         }
 
         .header-content {
@@ -33,12 +34,47 @@
             padding: 0 2rem;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+        .header-left,
+        .header-right {
+            min-width: 280px;
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.95rem;
+            color: #e5ecff;
+        }
+
+        .header-contact a {
+            color: #c9ddff;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .header-contact a:hover {
+            color: #ffffff;
         }
 
         nav ul {
@@ -55,6 +91,91 @@
 
         nav a:hover {
             color: #15a1ff;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #1132c2;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h4 {
+            color: #297bc9;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .project-card p {
+            color: #1f018b;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .project-card ul {
+            list-style-position: inside;
+            color: #1f018b;
+            margin-top: 0.75rem;
+        }
+
+        .project-card li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* Experience Section */
+        .experience-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #1132c2;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card h4 {
+            color: #297bc9;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .experience-card p {
+            color: #1f018b;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .experience-card ul {
+            list-style-position: inside;
+            color: #1f018b;
+            margin-top: 0.75rem;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* Education Section */
+        .education-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #1132c2;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-card h4 {
+            color: #297bc9;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .education-card p {
+            color: #1f018b;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
         }
 
         /* Hero Section */
@@ -105,10 +226,47 @@
         }
 
         /* Skills Section */
-        .skills-grid {
+        .tab-container {
+            margin-top: 2rem;
+        }
+
+        .tab-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-button {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: white;
+            padding: 0.75rem 1.1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+        }
+
+        .tab-button.active,
+        .tab-button:hover {
+            background-color: #ffffff;
+            color: #131a3f;
+            border-color: #ffffff;
+        }
+
+        .tab-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: grid;
         }
 
         .skill-card {
@@ -152,14 +310,15 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="logo">Trevor Moore</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-left">
+                <div class="header-title">TREVOR L. MOORE</div>
+                <div class="header-subtitle">Veteran Status: Disabled Veteran</div>
+            </div>
+            <div class="header-right header-contact">
+                <div><a href="mailto:proof_the_truth@gmail.com">proof_the_truth@gmail.com</a> | Phone: 757-652-1878</div>
+                <div>Freeport, Florida | <a href="http://www.linkedin.com/in/brian-moore-747ba194" target="_blank" rel="noreferrer">linkedin.com/in/brian-moore-747ba194</a></div>
+                <div>Open to Relocation | GitHub: <a href="https://github.com/proofthetruth-collab/desktop-tutorial" target="_blank" rel="noreferrer">proofthetruth-collab/desktop-tutorial</a></div>
+            </div>
         </div>
     </header>
 
@@ -177,18 +336,13 @@
         <h2>About Me</h2>
         <div class="about-content">
             <p>
-                I am a dedicated AI & Machine Learning student with 29 years of leadership experience in training, operations, and multi-store management. 
-                As a Disabled Veteran with 25 years of management experience I have a proven track record in implementing digital systems and training large teams, 
-                I bring both technical skills and extensive operational expertise to every project.
+                <strong>Entry-Level AI/ML Engineer</strong>
             </p>
             <p style="margin-top: 1rem;">
-                Currently serving as a Regional Learning Specialist at National Vision, Inc., I train and support 
-                12 Training Store Managers(District Trainers) across multiple states while developing my expertise in Python, data analysis, 
-                and machine learning. I'm passionate about solving complex problems through data-driven approaches and continuous learning.
+                Data-driven AI & Machine Learning Engineer with hands-on experience in Python, Pandas, NumPy, SQL, Git/GitHub, exploratory data analysis (EDA), statistical modeling, hypothesis testing, and data-manipulation workflows.
             </p>
             <p style="margin-top: 1rem;">
-                <strong>Key Strengths:</strong> Leadership, digital transformation, technical troubleshooting, team training, 
-                data analysis, operational efficiency, and compliance management.
+                Skilled in building reproducible analysis pipelines, cleaning and transforming complex datasets, and applying probability theory and statistical methods to uncover patterns and support decision-making.
             </p>
         </div>
     </section>
@@ -196,49 +350,269 @@
     <!-- Skills Section -->
     <section id="skills" class="container">
         <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Programming & Data Analysis</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                    <li>Excel</li>
-                    <li>Data Cleaning</li>
-                </ul>
+        <div class="tab-container">
+            <div class="tab-list" role="tablist">
+                <button class="tab-button active" type="button" data-tab="programming">Programming</button>
+                <button class="tab-button" type="button" data-tab="tools">Tools</button>
+                <button class="tab-button" type="button" data-tab="technical">Technical</button>
+                <button class="tab-button" type="button" data-tab="leadership">Leadership</button>
             </div>
 
-            <div class="skill-card">
-                <h3>Office & Communication Tools</h3>
-                <ul>
-                    <li>Microsoft Word</li>
-                    <li>PowerPoint</li>
-                    <li>Outlook 365</li>
-                    <li>Microsoft Teams</li>
-                    <li>Zoom</li>
-                </ul>
+            <div class="tab-content">
+                <div class="tab-panel active" id="programming" role="tabpanel">
+                    <div class="skill-card">
+                        <h3>Programming & Data Analysis</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>SQL</li>
+                            <li>Exploratory Data Analysis (EDA)</li>
+                            <li>Statistical Modeling</li>
+                            <li>Hypothesis Testing</li>
+                            <li>Data Manipulation</li>
+                            <li>Excel</li>
+                            <li>Data Cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="tools" role="tabpanel">
+                    <div class="skill-card">
+                        <h3>Office & Collaboration Tools</h3>
+                        <ul>
+                            <li>Microsoft Word</li>
+                            <li>PowerPoint</li>
+                            <li>Outlook 365</li>
+                            <li>Microsoft Teams</li>
+                            <li>Zoom</li>
+                            <li>Git/GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="technical" role="tabpanel">
+                    <div class="skill-card">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Windows OS</li>
+                            <li>Chrome & Firefox</li>
+                            <li>Technical Troubleshooting</li>
+                            <li>EHR Systems</li>
+                            <li>Equipment Calibration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="leadership" role="tabpanel">
+                    <div class="skill-card">
+                        <h3>Leadership & Operations</h3>
+                        <ul>
+                            <li>Team Training & Development</li>
+                            <li>Multi-Store Management</li>
+                            <li>Project Management</li>
+                            <li>Operational Efficiency</li>
+                            <li>Compliance & Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Projects Section -->
+    <section id="projects" class="container">
+        <h2>Tech Projects</h2>
+        <div class="tab-container">
+            <div class="tab-list" role="tablist">
+                <button class="tab-button active" type="button" data-tab="imdb">Entertainment - IMDb</button>
+                <button class="tab-button" type="button" data-tab="instacart">Instacart</button>
+                <button class="tab-button" type="button" data-tab="videogame">Video Games</button>
+                <button class="tab-button" type="button" data-tab="venture">Venture Insight</button>
+                <button class="tab-button" type="button" data-tab="megaline">Megaline Mobile</button>
+                <button class="tab-button" type="button" data-tab="betabank">Beta Bank</button>
             </div>
 
-            <div class="skill-card">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Windows OS</li>
-                    <li>Chrome & Firefox</li>
-                    <li>Technical Troubleshooting</li>
-                    <li>EHR Systems</li>
-                    <li>Equipment Calibration</li>
-                </ul>
+            <div class="tab-content">
+                <!-- Entertainment - IMDb Tab -->
+                <div class="tab-panel active" id="imdb" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Entertainment Industry - IMDb Analysis</h4>
+                        <p>Explored a dataset with records on movies and TV shows from the entertainment industry and investigated how the number of votes a title receives from IMDb users impacts its ratings.</p>
+                        <ul>
+                            <li>Analyzed an entertainment-industry dataset of 8,000+ movies and TV shows to evaluate how IMDb user voting behavior influences title ratings, uncovering measurable relationships between vote volume and perceived popularity.</li>
+                            <li>Engineered a full data-processing pipeline in Python and Pandas to clean, transform, and explore large-scale media records, enabling efficient pattern detection and insight generation.</li>
+                            <li>Conducted statistical hypothesis testing using Welch's t-test, validating platform strategy recommendations with 95% confidence and supporting data-driven decision-making.</li>
+                            <li>Built automated data-pulling and analysis algorithms to streamline insight delivery and translate findings into actionable business recommendations for content and platform optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Instacart Tab -->
+                <div class="tab-panel" id="instacart" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Instacart - Grocery Sales Trends</h4>
+                        <p>Evaluated grocery cart sales trends and provided strategic recommendations for Instacart Company's 2017 advertising campaign planning.</p>
+                        <ul>
+                            <li>Processed 400,000+ grocery transaction records using Python and Pandas to distinguish manually added items from auto-reordered items, uncovering key behavioral patterns in customer purchasing.</li>
+                            <li>Applied Welch's t-test to validate platform strategy hypotheses with 98% confidence, demonstrating strong statistical rigor and evidence-based insight generation.</li>
+                            <li>Visualized regional market trends using Matplotlib, revealing platform disintegration and informing targeted marketing strategies across geographic segments.</li>
+                            <li>Identified the top 20 most frequently added grocery items and delivered data-driven recommendations to guide advertising budget allocation and optimize promotional focus.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Video Games Tab -->
+                <div class="tab-panel" id="videogame" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Online Game Company - Video Game Sales</h4>
+                        <p>Analyzed video game sales data to identify market trends and provide strategic recommendations for Ice Company's 2017 advertising campaign planning.</p>
+                        <ul>
+                            <li>Processed 16,000+ global video-game records using Python and Pandas, identifying a clear profitability gap between Action and Sports genres and uncovering top-performing titles and platforms worldwide.</li>
+                            <li>Applied Welch's t-test to validate platform strategy hypotheses with 98% confidence, demonstrating strong statistical rigor and evidence-based insight generation.</li>
+                            <li>Visualized regional market trends with Matplotlib, revealing platform fragmentation and showing that critic scores have a direct impact on sales performance across regions.</li>
+                            <li>Delivered data-driven business recommendations to support advertising budget allocation, helping stakeholders prioritize high-ROI genres, platforms, and markets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Venture Insight Tab -->
+                <div class="tab-panel" id="venture" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Venture Insight - VC Ecosystem Analysis</h4>
+                        <p>Utilized a newly acquired venture ecosystem database (funds, startups, acquisitions, key personnel) and built SQL-based pipelines to extract, clean, and normalize large relational datasets for modeling and analysis.</p>
+                        <ul>
+                            <li>Designed complex SQL queries to join multi-table investment records, track funding trajectories, and engineer features related to founder background, sector momentum, and acquisition likelihood.</li>
+                            <li>Conducted exploratory data analysis (EDA) using SQL and Python to identify patterns in deal flow, investment timing, sector performance, and historical success indicators across the VC landscape.</li>
+                            <li>Built visual analytics dashboards to communicate market trends, investment patterns, and model-driven insights to research leadership and VC partners.</li>
+                            <li>Delivered data-driven recommendations that informed the firm's quarterly investment report, improving the precision and confidence of multi-million-dollar allocation decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Megaline Mobile Tab -->
+                <div class="tab-panel" id="megaline" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Megaline Mobile Carrier - Plan Recommendation Model</h4>
+                        <p>Analyzed subscriber behavioral data (calls, messages, internet usage) to build a classification model recommending the optimal new plan (Smart vs. Ultra) for legacy customers.</p>
+                        <ul>
+                            <li>Utilized Python and scikit-learn to train and evaluate multiple machine learning algorithms, optimizing for the project's required accuracy threshold of 0.75.</li>
+                            <li>Engineered predictive features from usage patterns and applied train/validation/test splitting to ensure robust model performance and prevent data leakage.</li>
+                            <li>Trained and compared models including Logistic Regression, Decision Tree, and Random Forest, selecting the best-performing model based on validation accuracy and generalization to unseen data.</li>
+                            <li>Achieved 81% test accuracy, surpassing the required performance threshold and demonstrating strong predictive capability for real-world deployment.</li>
+                            <li>Provided insights into feature importance, highlighting which subscriber behaviors most strongly influence plan suitability.</li>
+                            <li>Delivered a model-driven recommendation framework enabling Megaline to guide customers toward the most cost-effective and usage-aligned plan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Beta Bank Tab -->
+                <div class="tab-panel" id="betabank" role="tabpanel">
+                    <div class="project-card">
+                        <h4>Beta Bank - Customer Churn Prediction</h4>
+                        <p>Built a machine learning model to predict customer churn using historical behavioral and contract-termination data, enabling proactive retention strategies.</p>
+                        <ul>
+                            <li>Engineered features from customer activity patterns and applied train/validation/test splitting to ensure reliable generalization.</li>
+                            <li>Trained and compared multiple classification algorithms (Logistic Regression, Decision Trees, Random Forest, and Gradient Boosting) with a focus on maximizing F1 score for imbalanced data.</li>
+                            <li>Achieved an F1 score above the required 0.59 threshold on the test dataset (F1: 0.594), improving the bank's ability to identify high-risk customers.</li>
+                            <li>Evaluated model performance using AUC-ROC (0.854), demonstrating excellent ability to distinguish churners from non-churners across all thresholds.</li>
+                            <li>Delivered insights into key churn drivers, supporting targeted retention campaigns and reducing customer loss.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <div class="tab-container">
+            <div class="tab-list" role="tablist">
+                <button class="tab-button active" type="button" data-tab="walmart">Vision Center Manager</button>
+                <button class="tab-button" type="button" data-tab="national-vision">National Vision</button>
+                <button class="tab-button" type="button" data-tab="americas-best">America's Best</button>
             </div>
 
-            <div class="skill-card">
-                <h3>Leadership & Operations</h3>
-                <ul>
-                    <li>Team Training & Development</li>
-                    <li>Multi-Store Management</li>
-                    <li>Project Management</li>
-                    <li>Operational Efficiency</li>
-                    <li>Compliance & Documentation</li>
-                </ul>
+            <div class="tab-content">
+                <!-- Vision Center Manager Tab -->
+                <div class="tab-panel active" id="walmart" role="tabpanel">
+                    <div class="experience-card">
+                        <h4>Vision Center Manager</h4>
+                        <p><strong>Sam's/Walmart (04/2025 - Present)</strong></p>
+                        <ul>
+                            <li>Applied statistical analysis to weekly sales and associate performance data to uncover behavioral patterns, predict sales outcomes, and guide strategic coaching interventions.</li>
+                            <li>Identified key drivers of customer satisfaction and product returns through exploratory data analysis, enabling targeted process improvements that reduced remakes by 5% and increased retention.</li>
+                            <li>Developed hypotheses around staffing efficiency, customer flow, and sales conversion, validating insights through metric-based experimentation and performance tracking.</li>
+                            <li>Improved operational decision-making by synthesizing large volumes of sales, inventory, and customer-service data into actionable insights for regional leadership.</li>
+                            <li>Enhanced cross-functional training programs by analyzing skill-gap data and designing interventions that increased team versatility and service consistency.</li>
+                            <li>Strengthened marketing effectiveness by evaluating product placement, signage performance, and promotional engagement to optimize in-store strategies and produced 15% growth over annual budget.</li>
+                            <li>Leveraged data-driven communication to influence leadership decisions, aligning store operations with broader organizational goals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- National Vision Tab -->
+                <div class="tab-panel" id="national-vision" role="tabpanel">
+                    <div class="experience-card">
+                        <h4>Regional Learning Specialist</h4>
+                        <p><strong>National Vision, Inc. (02/2022 - 03/2025)</strong></p>
+                        <ul>
+                            <li>Implemented digital systems (EHR, Remote Care) across multiple states, training teams on technical workflows and troubleshooting.</li>
+                            <li>Analyzed training gaps and operational performance data to recommend workflow improvements that increased productivity by 5%+ across multiple districts. Evaluated appointment scheduling efficiency and retention metrics using Excel and data-tracking tools, identifying bottlenecks and opportunities for process optimization.</li>
+                            <li>Led weekly 1:1 strategy-calls with Regional Vice Presidents to diagnose district-specific training gaps and develop targeted training and budget solutions that improved productivity by 5%+.</li>
+                            <li>Revamped training materials and curricula into digital e-learning modules within the LMS, increasing accessibility and improving user experience for field teams.</li>
+                            <li>Designed and launched the Lead Remote OD Program, collaborating with Legal to secure approvals and improving cross-departmental alignment by 20%.</li>
+                            <li>Served as the Training Department liaison to the Senior Manager of Clinical Services, conducting ongoing 1:1 coaching to strengthen remote best practices and reinforce a patient-first service culture.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- America's Best Tab -->
+                <div class="tab-panel" id="americas-best" role="tabpanel">
+                    <div class="experience-card">
+                        <h4>General Manager / District Trainer</h4>
+                        <p><strong>America's Best (10/2015 - 02/2022)</strong></p>
+                        <ul>
+                            <li>Managed operational data, staffing metrics, payroll accuracy, and inventory reporting across 15+ stores, ensuring consistent performance and compliance.</li>
+                            <li>Identified performance trends using operational KPIs and developed targeted action plans that improved customer retention by 15%.</li>
+                            <li>Reduced product remakes and refunds by 10% through root-cause analysis and customer-education strategies.</li>
+                            <li>Analyzed district-level profit data and developed long-term business objectives to drive sustainable growth across multiple locations.</li>
+                            <li>Assisted District Managers with forecasting staffing needs, recruiting, and developing high-performing teams, contributing to 20% company growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="tab-container">
+            <div class="tab-list" role="tablist">
+                <button class="tab-button active" type="button" data-tab="triple-ten">Triple Ten Certificate</button>
+                <button class="tab-button" type="button" data-tab="georgia-state">Georgia State University</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Triple Ten Tab -->
+                <div class="tab-panel active" id="triple-ten" role="tabpanel">
+                    <div class="education-card">
+                        <h4>AI & Machine Learning Engineering Certificate</h4>
+                        <p><strong>Triple Ten (10/2025 - 08/2026)</strong></p>
+                        <p>Comprehensive bootcamp in AI and machine learning technologies, including Python, data analysis, statistical modeling, and practical ML applications.</p>
+                    </div>
+                </div>
+
+                <!-- Georgia State University Tab -->
+                <div class="tab-panel" id="georgia-state" role="tabpanel">
+                    <div class="education-card">
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <p><strong>Georgia Perimeter College / Georgia State University (1995 - 1999)</strong></p>
+                        <p>Foundational studies in computer science principles, programming, and systems design.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -248,5 +622,27 @@
         <p>&copy; 2026 Trevor L. Moore. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Disabled Navy Veteran | AI & Machine Learning Student</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const container = button.closest('.tab-container');
+                    const targetTab = button.dataset.tab;
+
+                    // Remove active state from buttons in this container
+                    container.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.toggle('active', btn === button);
+                    });
+
+                    // Remove active state from panels in this container
+                    container.querySelectorAll('.tab-panel').forEach(panel => {
+                        panel.classList.toggle('active', panel.id === targetTab);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
