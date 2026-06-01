@@ -238,9 +238,9 @@
         }
 
         .tab-button {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: white;
+            background-color: #e7ecff;
+            border: 2px solid #1132c2;
+            color: #131a3f;
             padding: 0.75rem 1.1rem;
             border-radius: 999px;
             cursor: pointer;
@@ -248,11 +248,16 @@
             transition: background-color 0.25s, border-color 0.25s, color 0.25s;
         }
 
-        .tab-button.active,
-        .tab-button:hover {
+        .tab-button.active {
             background-color: #ffffff;
             color: #131a3f;
-            border-color: #ffffff;
+            border-color: #1132c2;
+            box-shadow: 0 4px 10px rgba(17, 50, 194, 0.12);
+        }
+
+        .tab-button:hover {
+            background-color: #dbe4ff;
+            color: #131a3f;
         }
 
         .tab-content {
@@ -321,15 +326,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Trevor L. Moore</h1>
-            <p>AI & Machine Learning Student | Regional Learning Specialist | Disabled Navy Veteran</p>
-            <p style="font-size: 1rem; margin-top: 1.5rem;">Freeport, FL • 757‑652‑1878 • Proof.the.truth@gmail.com</p>
-        </div>
-    </section>
 
     <!-- About Me Section -->
     <section id="about" class="container">
